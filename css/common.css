@@ -1,0 +1,356 @@
+@charset "utf-8";
+/* CSS Document */
+/*reset style*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,select,textarea,p, button,
+table,th,td,blockquote,address,hr,figure,section,nav{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box;}
+fieldset,img{border:0;}
+table{border-collapse:collapse;border-spacing:0;}
+address,caption,cite,code,dfn,em,strong,th,i,var{font-weight:normal;font-style:normal;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+dl,ul,ol,li{list-style:none;}
+input,a{border:0;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);} /*去掉手机端按钮点击出现的蓝色边框*/
+input[type=text],input[type=button]{outline:0;}
+body,th,td,input,select,textarea,button {font-size:12px;font-family:"Helvetica Neue","Microsoft YaHei",Arial, Helvetica, Verdana, Tahoma,sans-serif;}
+img{max-width:100%;vertical-align:middle;border:0;}  /*给img最大宽度设置为100%*/
+input,textarea,button,select,a{-webkit-tap-highlight-color:rgba(0,0,0,0);outline:none;-webkit-appearance:none;appearance:none;border:none;text-decoration:none;}
+a:hover{text-decoration:none;}
+
+body{
+	margin:0 auto;
+	background:#FFF;
+	max-width:640px;
+	min-width:300px;
+	position:relative;
+	-webkit-font-smoothing:antialiase;
+	-webkit-text-size-adjust:100%;
+	-webkit-user-select:none;
+}
+
+.clearfix{zoom:1;}
+.clearfix:after{
+	content:'.';
+	display:block;
+	width:0;
+	height:0;
+	font-size:0;
+	clear:both;
+	visibility:hidden;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.pos_r{
+	position:relative;
+}
+.pos_a{
+	position:absolute;
+}
+
+
+/*placeholder*/
+::-webkit-input-placeholder { /* WebKit browsers */ 
+    color:#808080; 
+    background:transparent;
+} 
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+    color:#808080;  
+    background:transparent;
+} 
+::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+    color:#808080;  
+    background:transparent;
+} 
+:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+    color:#808080; 
+    background:transparent;
+}
+
+/*上面的部分是为了清除浏览器默认的样式，重新对页面进行渲染 reset.css*/
+
+/*下面这个是定义一些颜色，字体等*/
+.col_font{color:#808080;}
+.col_zong{color:#EC6945;}
+.col_sky{color:#2CCBE3;}
+.col_gre{color:#549b36;}
+.bgd{background:#e8e8e8;}
+.bg_zong{background:#EC6945;color:white;}
+.max_640{max-width:640px;}
+.pdbom{padding-bottom:4px;}
+.pdt_8{padding-top:8px;}
+.pdb_2{padding-bottom:2px;}
+.bold{font-weight:bold;}
+.font_14{font-size:14px;}
+.font_12{font-size:12px;}
+.ver_mid{vertical-align:middle;}
+.hide{display:none;}
+.bg_fff{background:#fff;}
+.line_20{line-height:20px;}
+.mgb_10{margin-bottom:10px;}
+
+/*loading,nomoreinfo*/
+.loading{
+	width:100%;
+	padding:30px 0 20px;
+	text-align:center;
+	background:transparent;
+	margin:0 auto;
+	display:none;
+	clear:both;
+	position:relative;
+	z-index:8;
+	background:#FFF;
+}
+.loading>img{border:none;z-index:8;}
+.nomoreinfo{color:#808080;}  /*无更多信息*/
+
+/*暂无出价*/
+.no_chu{
+	text-align:center;
+	padding:20px 0;
+	font-size:14px;
+	background:#FFF;
+	position:relative;
+	z-index:8;
+}
+
+/*下面是全站都用的*/
+.head_fixed{
+	background:white;
+	height:40px;
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index:30;
+	overflow:hidden;
+}
+.page{
+	position:relative;  
+	-webkit-box-sizing:border-box;
+	-mo-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.wrap{
+	margin:40px 0 44px;
+}
+
+
+/*详情页公共公用头部部分*/
+.sub_menu{
+	-webkit-box-shadow:0 0 2px #808080;
+	box-shadow:0 0 2px #808080;
+    vertical-align: middle;
+    color:#7E7E7E;
+    padding:0 10px;
+    overflow:hidden;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.sub_menu .go_back{
+	position:absolute;
+	left:10px;
+}
+.sub_menu .go_back img{
+	display:inline-block;
+	height:18px;
+	margin-top:11px;
+}
+.sub_menu .sub_title{
+	text-align:center;
+	height:40px;
+	line-height:40px;
+	font-size:16px;
+}
+
+
+
+/*头部*/
+
+.nav_bar{
+	overflow:hidden;
+	height:40px;
+	line-height:40px;
+	overflow-x:auto;
+	overflow-y:hidden;
+	position:relative;
+	-webkit-transition:all .2s ease-out;
+	transition:all .2s ease-out;
+}
+.nav_box{
+	position:absolute;
+	left:0;
+	/* width:350px; */  
+	font-size:0;
+}
+.nav_box .cur{
+	color: #EC6945;
+}
+.nav_bar a{
+	display:inline-block;
+	width:76px;
+	text-align:center;
+	font-size:13px;
+	color:#808080;
+	height:100%;
+}
+
+
+
+
+
+
+/*详情页或二级页面的头部公共样式*/
+.head_tab{
+    line-height: 40px;
+    vertical-align: middle;
+    color:#7E7E7E;
+    padding:0 10px;
+    overflow:hidden;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.head_tab .back_btn{
+	width: 10px;
+    height: 18px;
+    display: inline-block;
+    position: absolute;
+    top: 11px;
+    left: 0px;
+    padding: 0 20px 0 10px;
+}
+
+
+
+
+
+
+/*全站调用弹窗的时候mask(如果没用objCenter函数)*/
+.mask{
+	position:fixed;
+	top:0;
+	bottom:0;
+	width:100%;
+	background:rgba(0,0,0,.5);
+	z-index:102;
+	display:none;
+	max-width:640px;
+}
+
+
+
+
+/*还没有夺宝记录样式--一张img*/
+.no_note{
+	text-align:center;
+	width:24%;
+	margin:50px auto 0;
+}
+
+
+
+
+
+/*有消息后我在图标右上角的小红点*/
+.has_news:after{
+	content:'';
+	display:inline-block;
+	width:6px;
+	height:6px;
+	background:#EC6945;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	position:absolute;
+	right:8px;
+	top:8px;
+}
+
+
+
+
+/*横栏滑动到顶部后固定时addClass*/
+.fixed_hd{
+	position:fixed;
+	max-width:640px;
+	width:100%;
+	z-index:30;
+}
+
+
+
+
+/*图片轮播*/
+.slideBox{
+	position:relative;
+	overflow:hidden;
+}
+.slideBox>.bd li img{
+	width:100%;
+}
+.slideBox>.hd{
+	position:absolute;
+	bottom:2px;
+	line-height:8px;
+	height:8px;
+	text-align:center;
+	width:100%;
+}
+.slideBox>.hd>ul>li{
+    display:inline-block; /*inline不能设置宽度*/
+    margin-left:10px;
+    width:4px;
+    height:4px;
+    margin:2px 6px 0 0;
+    background:#fff;
+    border-radius:50%;
+    text-indent:-9999em;
+}
+.slideBox>.hd>ul>li:last-child{
+	margin-right:0;
+}
+.slideBox>.hd>ul>li.on{
+    background:#EC6945;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

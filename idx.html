@@ -16,25 +16,17 @@
   <title>入香如净</title>
   <link rel="stylesheet" type="text/css" href="css/common.css" />
   <link rel="stylesheet" type="text/css" href="css/index.css" />
-  <style>
-   .idx_module{ 
-        filter:alpha(opacity=100);
-        opacity:1;
-        -webkit-transform:translate3d(0,0,0);
-        -moz-transform:translate3d(0,0,0);
-        -ms-transform:translate3d(0,0,0);
-        transform:translate3d(0,0,0);    
-    }
-  </style>
+
 </head>
 
 <body>
   
   <div class="page">
       
-      <!--单独首页-->
+      <div class="switchBtn" id="switchBtn"><img src="images/idx/switchBtn.png" alt="呼出首页模块" /></div> 
+      <!--首页模块-->
       <div class="idx_module" id="idx_module">
-
+          <span class="idx_close" id="idx_close"><img src="images/idx/idx_clo.png" alt="关闭首页模块" /></span>
           <div class="idx_notice">
               <img class="laba_icon" src="images/idx/notice.png" alt="公告" />
               <div id="marquee" class="marquee">
@@ -67,7 +59,7 @@
                     <span>绝对权限 一对一供应</span>
                   </div>
                 </a>
-                <a class="dong square mgr" href="news_xc.html">
+                <a class="dong square mgr" href="">
                   <div>
                     <p>香内参</p>
                     <span>国际沉香行情在线动态</span>
@@ -86,16 +78,45 @@
           </div>
           <div class="idx_foot"><img src="images/idx/lian_icon.png" /></div>
       </div>
+      
   </div>
      
 
   <script src="js/jquery-1.10.1.min.js"></script>
   <script>
-  
-     //中间板块垂直居中
-     var idx_inner = $$('idx_inner');
-     ele_mid(idx_inner);     
-    //公告信息
+    //实时调整首页按钮的right，用于在PC上显示相同位置
+    ;(function(doc){
+      var winW = doc.documentElement.clientWidth || doc.body.clientWidth;
+      var sizeW = 640;
+      var orgt = 20;
+      var rgt = winW>640?(parseInt((winW-sizeW)/2) + orgt):orgt;
+      document.getElementById('switchBtn').style.right = rgt + 'px';
+    })(document);
+
+    //按钮切换--公共部分
+     function switch_idx(){
+           var switchBtn = $$('switchBtn');
+           var idx_module = $$('idx_module');
+           var idx_clo = $$('idx_close');
+           var idx_inner = $$('idx_inner');
+           ele_mid(idx_inner);     
+           function idx_slide(){  
+              idx_module.style.filter = 'alpha(opacity=100)';
+              idx_module.style.opacity = 1; 
+              idx_module.style.webkitTransform = 'translate3d(0,0,0)';
+              switchBtn.style.display = 'none';
+           }
+           myAddEvent(switchBtn,'click',idx_slide);
+           myAddEvent(idx_clo,'click',function(){
+              idx_module.style.webkitTransform = 'translate3d(100%,0,0)';
+              switchBtn.style.display = 'block';
+           });
+     }
+     switch_idx();
+
+  </script>
+  <script>
+  //公告消息滚动
     function Imarquee(height,speed,delay){
           var scrollT;
             var pause = false;

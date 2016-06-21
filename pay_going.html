@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+  <meta content="telephone=no" name="format-detection">  
+  <meta content="email=no" name="format-detection"> 
+  <meta name="keywords" content="香友会天天夺宝，问香新改版，一元夺宝，委托拍卖">
+  <meta name="description" content="香友会天天夺宝，问香新改版，系统升级邀您一起来体验">
+  <title>支付中</title>
+  <link rel="stylesheet" type="text/css" href="css/common.css" /> 
+  
+  <style>
+  .pay_text{
+    color:#EC6945;
+    font-size:15px;
+    font-family:'Microsoft Yahei',Arial;
+    font-weight:bold;
+    height:50px;
+    line-height:50px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin:-40px 0 0 -50px;
+    display:block;
+    letter-spacing:1px;
+    width:140px;
+  }
+  .pay_dian{
+    padding-left:4px;
+    letter-spacing:1px;
+  }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+    <p class="pay_text" id="pay_text">支付跳转中<span class="pay_dian" id="pay_dian">...</span></p>
+  </div>
+     
+
+  <script src="js/jquery-1.10.1.min.js"></script>
+  <script>
+  // 省略号动画
+  var count = 0;
+  function dian_anima(){    
+    var $pay_dian = $('#pay_dian');
+    var str = '...';
+    $pay_dian[0].innerHTML = str.substring(0,count);
+    count++;
+    if(count == 4){
+      count = 0;
+    }
+    setTimeout(dian_anima,400);
+  }
+  dian_anima();
+ 
+
+  </script>
+</body>
+</html>

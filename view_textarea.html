@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+      <meta http-equiv="Pragma" content="no-cache">
+      <meta http-equiv="Expires" content="0">
+      <meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+      <meta content="yes" name="apple-mobile-web-app-capable">
+      <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+      <meta content="telephone=no" name="format-detection">  
+      <meta content="email=no" name="format-detection"> 
+      <meta name="keywords" content="香友会入香如净，国际沉香供货，交易平台，来入香如净，买放心沉香">
+      <meta name="description" content="入香如净、限时闪购、一级竞拍、商品库、香内参">
+    <title>香友会</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <style>
+    *{
+        padding:0;
+        margin:0;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+    }
+    html,body{
+        -webkit-user-select:none; 
+        user-select:none;
+        font-family: 'lucida grande','lucida sans unicode',lucida,helvetica,'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei',sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+        font-size: 100%;
+    }
+    a{
+        -webkit-tap-highlight-color:rgba(0,0,0,0);
+    }
+    body{
+        background:#FFF;
+        font-size:14px;
+    }
+    ::-webkit-input-placeholder { /* WebKit browsers */ 
+        color: #abaaaa; 
+        background:#e5e5e5;
+    } 
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+        color: #abaaaa; 
+        background:#e5e5e5;
+    } 
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+        color: #abaaaa; 
+        background:#e5e5e5;
+    } 
+    :-ms-input-placeholder { /* Internet Explorer 10+ */ 
+        color: #abaaaa; 
+        background:#e5e5e5;
+    }
+    .page{
+        position:relative;
+    }
+    header,main,footer{display:block;position:absolute;}
+    header{
+        position:fixed;
+        top:0;
+        height:44px;
+        background:#fff;
+        z-index:100;
+    }
+    main{
+        position:absolute;
+        top:44px;
+        bottom:0px;
+        -webkit-overflow-scrolling:touch;
+        overflow-y:auto;
+        width:100%;
+    }
+    .content{
+        /* height:200px; */  
+        margin:10px 6px;
+    }
+    .write{
+        height:20px;
+        width:20px;
+        display:inline-block;
+        vertical-align:middle;
+        float:left;
+        margin:15px 6px 0;
+    }
+    .bianji,.submit{
+        display:inline-block;
+        outline:none;
+        border:none;
+        -webkit-tap-highlight-color:rgba(0,0,0,0);
+        -webkit-appearance:none;
+        appearance:none;
+    }
+    .bianji{
+        background:#e5e5e5;
+        height:34px;
+        margin-top:8px;
+        width:220px;
+        float:left;
+        -webkit-border-radius:3px;
+        border-radius:3px;
+        padding:0 8px;
+        z-index:1000;
+    }
+    .submit{
+        float:right;
+        width:50px;
+        height:40px;
+        margin:5px 2px 0;
+        background:transparent;
+        color:#ADACAD;
+        font-size:14px;
+    }
+
+    .ques_hd{
+        height:44px;
+        line-height:44px;
+        text-align:center;
+        font-size:16px;
+        position:relative;
+        border-bottom:1px solid #DFDFDF;
+        color:#5D5D5D;
+        box-shadow:0 1px #ccc;
+    }
+    .back{
+        position:absolute;
+        left:8px;
+        top:13px;
+        height:18px;
+        width:12px;
+        display:inline-block;  
+    }
+    .back img{
+        width:100%;
+        height:100%;
+        display:block;
+    }
+  
+    #textarea{
+        resize:none;
+        border:1px solid #E5E5E5;
+        outline:none;
+        -webkit-appearance:none;
+        appearance:none;
+        -webkit-tap-highlight-color:rgba(0,0,0,0);
+        width:100%;
+        font-size:14px;
+        color:#abaaaa;
+        background:#e5e5e5;
+        padding:10px 8px;
+    }
+    #lianxi{
+        display:block;
+        width:97%;
+        padding:10px 0;
+        margin:6px auto;
+        outline:none;
+        border:none;
+        text-indent:10px;
+        background:#e5e5e5;
+        -webkit-appearance:none;
+        appearance:none;
+        -webkit-border-radius:0;
+        border-radius:0;
+        -webkit-tap-highlight-color:rgba(0,0,0,0);
+    }
+    .content p{
+        width:97%;
+        margin:0 auto;
+        font-size:12px;
+        color:#abaaaa;
+    }
+    #tijiao{
+        display:block;
+        width:120px;
+        padding:8px 0;
+        text-align:center;
+        border:none;
+        background:#E96950;
+        color:#fff;
+        -webkit-border-radius:3px;
+        border-radius:3px;
+        margin:30px auto 0;
+        outline:none;
+        font-size:15px;
+        -webkit-appearance:none;
+        -webkit-tap-highlight-color:rgba(0,0,0,0);
+    }
+    </style>
+</head> 
+ 
+<body>
+   
+    <div class="page">
+      <div class="wenx_content wrap">
+        <header class="head_fixed max_640 sub_menu">
+          <a href="source.html" class="go_back"><img src="images/sub_left2.png" /></a>
+          <h2 class="sub_title">问题编辑</h2>
+        </header>
+        <main>
+            <div class="content">
+                <form action="" method="">
+                    <textarea name="textarea" id="textarea" cols="30" rows="6" placeholder="请输入文字..."></textarea>
+                    <input id="lianxi" type="text" placeholder="您的联系方式:手机号/微信号/QQ" />
+                    <p>留下您的联系方式有助于我们沟通和解决问题，仅工作人员可见</p>
+                    <input id="tijiao" type="submit" value="提交" />
+                </form>
+            </div>
+        </main>
+      </div>
+    </div>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script>
+    var _w = $(window).width(),
+        _h = $(window).height();
+    $('.page').height(_h);
+    $('#lianxi').focus(function(){
+        $(this).css('background','#e5e5e5');
+    });
+      
+    </script>
+
+</body>
+</html>

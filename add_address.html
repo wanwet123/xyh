@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+  <meta content="telephone=no" name="format-detection">  
+  <meta content="email=no" name="format-detection"> 
+  <meta name="keywords" content="香友会入香如净，国际沉香供货，交易平台，来入香如净，买放心沉香">
+  <meta name="description" content="入香如净、限时闪购、一级竞拍、商品库、香内参">
+  <title>添加地址</title>
+  <link rel="stylesheet" type="text/css" href="css/common.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/address.css" />
+
+  <script type="text/javascript" src="js/jquery-1.9.1.js"></script>  
+  <script type="text/javascript" src="js/area.js"></script>  
+
+  <style>
+  .wrap{
+    margin-bottom:80px;
+  } 
+  body{background:#FFF;}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+   
+    <header class="head_fixed max_640 sub_menu">
+      <a href="" class="go_back"><img src="images/sub_left2.png" /></a>
+      <h2 class="sub_title">添加地址</h2>
+    </header>
+        
+
+
+    <div class="wenx_content wrap">
+           
+          
+          <section class="adsArea">
+              <form action="" method="" class="adsForm">
+                <div class="receiver">
+                  <label for="name">收货人<span>名</span></label><input class="inf" type="text" id="name" placeholder="名字" />
+                </div>
+                <div class="phone">
+                  <label for="phone">手机号码</label><input id="phone" class="inf" type="tel" placeholder="11位手机号" />
+                </div>
+                <div id="addAddress" class="loca">
+                  <label for="shengshi">选择地区</label><input class="inf" type="text" id="shengshi" placeholder="地区信息" readonly="readonly" onClick="getProvinceBuy()" />
+                  <div class="addressGe" id="addressGe">
+                    <input id="sheng" type="text" value="1" readonly="readonly" />
+                    <input id="shi" type="text" value="2" readonly="readonly" />
+                    <input id="qu" type="text" value="3" readonly="readonly" />
+                  </div>
+                </div>
+                <div class="jieDetail">
+                  <label for="jiedao" style="vertical-align:top;">详细地址</label><textarea class="inf"  placeholder="街道门牌信息"  cols="30" rows="3"></textarea>
+                </div>
+                <!-- <div class="postal">
+                  <label for="youbian">邮政编码</label><input class="inf" type="number" id="youbian" placeholder="邮政编码" />
+                </div> -->
+                <input type="submit" class="bg_zong saveAddress" value="保存收货地址" />
+              </form>
+              <!-- <a href="" class="cun_address bg_zong">保存收货地址</a> -->
+           </section>
+  
+
+    </div>
+
+   
+  </div>
+     
+
+  <script src="js/jquery-1.10.1.min.js"></script>
+  <script>
+    $('.inf').focus(function(){
+      $(this).parent('div').css('border-color','#EC6945').siblings().css('border-color','#e8e8e8');
+    }).blur(function(){
+      $(this).parent('div').css('border-color','#e8e8e8');
+    });
+
+  </script>
+</body>
+</html>

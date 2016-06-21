@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+      <meta http-equiv="Pragma" content="no-cache">
+      <meta http-equiv="Expires" content="0">
+      <meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+      <meta content="yes" name="apple-mobile-web-app-capable">
+      <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+      <meta content="telephone=no" name="format-detection">  
+      <meta content="email=no" name="format-detection"> 
+      <meta name="keywords" content="香友会入香如净，国际沉香供货，交易平台，来入香如净，买放心沉香">
+      <meta name="description" content="入香如净、限时闪购、一级竞拍、商品库、香内参">
+    <title>问题</title>
+    <style>
+    *{
+        padding:0;
+        margin:0;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+    }
+    html,body{
+        -webkit-user-select:none; 
+        user-select:none;
+        font-family: 'lucida grande','lucida sans unicode',lucida,helvetica,'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei',sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+        font-size: 100%;
+    }
+    a{
+        -webkit-tap-highlight-color:rgba(0,0,0,0);
+    }
+    body{
+        background:#EEE;
+        font-size:14px;
+    }
+    ::-webkit-input-placeholder { /* WebKit browsers */ 
+        color: #abaaaa; 
+        background:#e5e5e5;
+    } 
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+        color: #abaaaa; 
+        background:#e5e5e5;
+    } 
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+        color: #abaaaa; 
+        background:#e5e5e5;
+    } 
+    :-ms-input-placeholder { /* Internet Explorer 10+ */ 
+        color: #abaaaa; 
+        background:#e5e5e5;
+    }
+    .page{
+        position:relative;
+    }
+    header,main,footer{display:block;position:absolute;}
+    header{
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        height:76px;
+        background:#fff;
+        z-index:100;
+    }
+    main{
+        position:absolute;
+        top:76px;
+        bottom:0px;
+        -webkit-overflow-scrolling:touch;
+        overflow-y:auto;
+        width:100%;
+    }
+    .content{
+        /* height:200px; */  
+        padding:10px 16px;
+    }
+    .write{
+        height:20px;
+        width:20px;
+        display:inline-block;
+        vertical-align:middle;
+        float:left;
+        margin:15px 6px 0;
+    }
+    .bianji,.submit{
+        display:inline-block;
+        outline:none;
+        border:none;
+        -webkit-tap-highlight-color:rgba(0,0,0,0);
+        -webkit-appearance:none;
+        appearance:none;
+    }
+    .bianji{
+        background:#e5e5e5;
+        height:34px;
+        margin-top:8px;
+        width:220px;
+        float:left;
+        -webkit-border-radius:3px;
+        border-radius:3px;
+        padding:0 8px;
+        z-index:1000;
+    }
+    .submit{
+        float:right;
+        width:50px;
+        height:40px;
+        margin:5px 2px 0;
+        background:transparent;
+        color:#ADACAD;
+        font-size:14px;
+    }
+
+    .ques_hd{
+        height:44px;
+        line-height:44px;
+        text-align:center;
+        font-size:16px;
+        position:relative;
+        border-bottom:1px solid #DFDFDF;
+        color:#5D5D5D;
+    }
+    .back{
+        position:absolute;
+        left:8px;
+        top:13px;
+        height:18px;
+        width:12px;
+        display:inline-block;  
+    }
+    .back img{
+        width:100%;
+        height:100%;
+        display:block;
+    }
+    .ques_nav{
+        height:32px;
+    }
+    .ques_nav a{
+        display:inline-block;
+        text-decoration:none;
+        text-align:center;
+        width:49%;
+        height:100%;
+        color:#797979;
+        height:32px;
+        line-height:22px;
+        padding:5px 0;
+    }
+    .ques_nav a:first-child span{
+        display:block; 
+        border-right:1px solid #BCBCBC;
+    }
+    .cur{
+        border-bottom:1px solid #ea6948;
+    }
+    .que_block{
+        margin-bottom:14px;
+    }
+    .que_block:first-child{
+        margin-top:16px;
+    }
+    .que_block:last-child{
+        margin-bottom:80px;
+    }
+    .que_block h5{
+        font-weight:bold;
+        font-size:13px;
+        vertical-align:middle;
+        line-height:19px;
+        /* background:url(images/view_que_icon.png) no-repeat left top;
+        background-size:20px 20px;
+        padding:4px 0 4px 24px; */
+        /* padding-left:24px; */
+    }
+    .que_block h5 img{
+        width:18px;
+        height:18px;
+        vertical-align:middle;
+        display:block;
+        float:left;
+        margin-right:4px;
+    }
+    .que_block p{
+        color:#606060;
+        padding-left:22px;
+        padding-top:6px;
+        line-height:20px;
+        font-size:12px;
+    }
+    .view_foot{
+        display:block;
+        margin:100px 50px 0;
+        position:relative;
+        text-align:center;
+    }
+    .view_foot:after{
+        content:'';
+        position:absolute;
+        top:8px;
+        display:block;
+        width:100%;
+        height:1px;
+        background:#CBCBCB;
+    }
+    .view_foot img{
+        display:inline-block;
+        width:50px;
+        background:#EEE;
+        padding:0 8px;
+        -webkit-box-sizing:content-box;
+        box-sizing:content-box;
+        position:relative;
+        z-index:100;
+    }
+    </style>
+</head> 
+ 
+<body>
+   
+    <div class="page">
+        <header>
+            <div class="ques_hd">
+                <a class="back" href=""><img src="images/sub_left2.png" alt=""></a>
+                问题反馈
+            </div>
+            <div class="ques_nav">
+                <a  href="view_reply_a.html"><span>我的问题</span></a><a class="cur" href="javascript:;">常见问题</a>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="que_block">
+                    <h5><img src="images/me/cjwt.png" alt="">平台会币用来做什么？</h5>
+                    <p>平台会币目前分为两种：一种为信用会币，在｛拍卖｝出价拍卖商品时，需要抵扣相应的信用会币（即入场会币）作为押金入场；另一种为可消费会币，可直接购买商品。</p>
+                </div>
+                <div class="que_block">
+                    <h5><img src="images/me/cjwt.png" alt="">信用会币是什么？可消费会币又是什么？</h5>
+                    <p>每位平台新用户可免费获赠100枚信用会币，在｛拍卖｝出价时，需要抵扣相应的信用会币（即入场会币）作为押金，信用会币余额不足时则无法出价。<br />
+当此场拍卖结束后，在用户未违反活动规则的前提下，系统将自动返还所扣会币；若用户出现违规行为（如拍卖成功但拒付款等），此时入场所扣的信用会币将不再返还。<br />
+
+而可消费会币则是通过充值、分享、优惠券等途径获得的会币，可直接作为现金使用，购买商品。（注：信用会币无法充值）
+
+</p>
+                </div>
+                <div class="que_block">
+                    <h5><img src="images/me/cjwt.png" alt="">积分是什么？如何获取？</h5>
+                    <p>
+积分是本平台会员级别的主要判断依据。<br />
+会员级别总共分为三个等级：金牌VIP、银牌VIP、铜牌VIP，新用户默认为铜牌VIP，最高级别会员为金牌VIP。<br />
+当会员积分累积到10万，则升级至银牌VIP；累积到100万升级至金牌VIP。会员级别越高，能获得更多惊喜哦～<br />
+
+积分主要通过两种途径获得：<br />
+①用户在平台中的消费金额将以1:1的比例折合成积分；<br />
+②通过平台推出的相关活动获得。
+</p>
+                </div>
+                <div class="que_block">
+                    <h5><img src="images/me/cjwt.png" alt="">对收到货的商品不满意如何进行退换货？</h5>
+                    <p>自商品售出之日（以实际收货日期为准）起7日之内可以退换货，您可以在个人中心联系您的客服申请办理退换货事宜。
+                        <br />
+具体流程：联系客服申请退换货－寄回货品（买家承担运费）－卖家收货验货－卖家退款／卖家重新发货（卖家承担运费）
+</p>
+                </div>
+                <div class="que_block">
+                    <h5><img src="images/me/cjwt.png" alt="">对收到货的商品不满意如何进行退换货？</h5>
+                    <p>商品售出之日（以实际收货日期为准）起7日之内可以退换货，您可以在｛我在｝联系您的金牌客服申请办理退换货事宜。<br />
+具体流程：联系客服申请退换货－寄回货品（买家承担运费）－卖家收货验货－卖家退款／卖家重新发货（卖家承担运费）</p>
+                </div>
+                <div class="que_block">
+                    <h5><img src="images/me/cjwt.png" alt="">退货后卖家多久可以退款，款项退到哪里？</h5>
+                    <p>收到退货后，卖家会在24小时内操作退款，款项将原路退回至您的支付账户中。<br />
+储蓄卡：1-3个工作日，最多不超过5个工作日<br />
+信用卡：1-5个工作日，最多不超过15个工作日<br />
+（注：商品支付中使用优惠券抵扣的现金不可退回；使用会币支付的金额将退回至您的会币余额中，不可提现）
+</p>
+                </div>
+
+                
+            </div>
+        </main>
+    </div>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script>
+    var _w = $(window).width(),
+        _h = $(window).height();
+    $('.page').height(_h);
+ 
+    
+    
+
+
+      
+    </script>
+
+</body>
+</html>

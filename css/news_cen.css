@@ -1,0 +1,152 @@
+.news_wrap{
+	background:#FFF;
+}
+.news_wrap ul{
+	padding-bottom:30px;
+}
+.news_wrap li{
+    border-bottom:1px solid #E0E0E0;
+    /* padding:10px 0; */
+    color:#808080;
+  }
+
+.hd{
+	overflow:hidden;
+	padding:4px 5px;
+}
+.hd.cur{
+	/*border-bottom:1px solid #E0E0E0;*/
+	padding-bottom:4px;
+}
+.hd.cur + .bd{
+	border-top:1px solid #E0E0E0;
+	background:#F7EFE6;
+}
+.hd .category_icon{
+	display:inline-block;
+	width:40px;
+	float:left;
+	text-align:center;
+	background:white;
+	margin-right:5px;
+	color:#808080;
+	font-size:12px;
+}
+.hd .category_icon img{
+	display:block;
+	margin:0 auto;
+	width:36px;
+	/* height:40px; */
+	margin-bottom:2px;
+}
+.hd_text{
+	overflow:hidden;
+}
+.hd .news_head{
+	width:82%;
+	float:left;
+	padding:0 2% 0 0;
+	border-right:1px solid #E0E0E0;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	margin-top:3px;
+	padding-top:3px;
+}
+.hd .news_head h5{
+	width:100%;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	font-size:14px;
+}
+.hd .news_head span{
+	color:#B2B2B2;
+}
+.hd .toggle{
+	width:18%;
+	padding:0 0 0 2%;
+	display:inline-block;
+	text-align:center;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	padding-top:13px;
+	color:#808080;
+}
+.hd .toggle>span{
+	padding:0 0 0 4px;
+}
+.hd .has_new{
+	position:relative;
+}
+.hd .has_new:after{
+	content:'';
+	display:block;
+	width:6px;
+	height:6px;
+	background:#EC6945;
+	border-radius:50%;
+	position:absolute;
+	right:6%;
+	top:-4%;
+	z-index:100;
+}
+.bd{
+	display:none;
+	padding:10px 20px 10px;
+}
+.bd_row{
+	padding:4px 6px;
+	overflow:hidden;
+	color:#7D4A2D;
+}
+.bd_row:not(:last-child){
+	margin-bottom:8px;
+}
+.bd_row h5{
+	padding:3px 0 3px 6px;
+	position:relative;
+}
+.bd_row h5:after{
+	content:'';
+	display:inline-block;
+	width:4px;
+	height:4px;
+	background:#EC6945;
+	border-radius:50%;
+	position:absolute;
+	left:0;
+	top:50%;
+	margin-top:-2px;
+}
+.bd_row p{
+	line-height:170%;
+}
+.bd_row span{
+	padding:3px 0;
+	display:inline-block;
+	float:right;
+	color:#B2B2B2;
+}
+
+/*底部*/
+.clear,.yidu{
+	width:48%;
+	display:inline-block;
+	float:left;
+	text-align:center;
+	line-height:42px;
+}
+.clear>a,.yidu>a{
+	color:#808080;
+}
+.clear{
+	border-right:1px solid #e8e8e8;
+}
+.clear img,.yidu img{
+	width:24px;
+	margin-right:10px;
+
+}
+.clear span,.yidu span{
+	vertical-align:middle;
+}

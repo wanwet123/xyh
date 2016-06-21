@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+      <meta http-equiv="Pragma" content="no-cache">
+      <meta http-equiv="Expires" content="0">
+      <meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+      <meta content="yes" name="apple-mobile-web-app-capable">
+      <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+      <meta content="telephone=no" name="format-detection">  
+      <meta content="email=no" name="format-detection"> 
+      <meta name="keywords" content="香友会入香如净，国际沉香供货，交易平台，来入香如净，买放心沉香">
+      <meta name="description" content="入香如净、限时闪购、一级竞拍、商品库、香内参">
+    <title>我的问题</title>
+    <style>
+    *{
+        padding:0;
+        margin:0;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+    }
+    html,body{
+        -webkit-user-select:none; 
+        user-select:none;
+        font-family: 'lucida grande','lucida sans unicode',lucida,helvetica,'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei',sans-serif;
+    }
+    a{
+        -webkit-tap-highlight-color:rgba(0,0,0,0);
+    }
+    body{
+        background:#EEE;
+        font-size:14px;
+    }
+    ::-webkit-input-placeholder { /* WebKit browsers */ 
+        color: #A5A5A5; 
+        background:#e5e5e5;
+    } 
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+        color: #A5A5A5; 
+        background:#e5e5e5;
+    } 
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+        color: #A5A5A5; 
+        background:#e5e5e5;
+    } 
+    :-ms-input-placeholder { /* Internet Explorer 10+ */ 
+        color: #A5A5A5; 
+        background:#e5e5e5;
+    }
+    .page{
+        position:relative;
+    }
+    header,main,footer{display:block;position:absolute;}
+    header{
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        height:76px;
+        background:#fff;
+        z-index:100;
+    }
+    footer{
+        position:fixed;
+        bottom:0;
+        left:0;
+        right:0;
+        height:50px;
+        line-height:50px;
+        background:#fff;
+        border-top:1px solid #E5E5E5;
+        overflow:hidden;
+        z-index:100;
+        text-align:center;
+    }
+    footer span{
+        display:inline-block;
+        color:#EA6948;
+    }
+    main{
+        position:absolute;
+        top:76px;
+        bottom:50px;
+        -webkit-overflow-scrolling:touch;
+        overflow-y:auto;
+        width:100%;
+        z-index:10;
+    }
+    .content{
+        /* height:200px; */  
+        padding:10px 16px;
+    }
+    .write{
+        height:20px;
+        width:20px;
+        display:inline-block;
+        vertical-align:middle; 
+        margin:0px 12px 0 0;
+    }
+    .bianji,.submit{
+        display:inline-block;
+        outline:none;
+        border:none;
+        -webkit-tap-highlight-color:rgba(0,0,0,0);
+        -webkit-appearance:none;
+        appearance:none;
+    }
+    .bianji{
+        background:#e5e5e5;
+        height:34px;
+        margin-top:8px;
+        width:220px;
+        float:left;
+        -webkit-border-radius:3px;
+        border-radius:3px;
+        padding:0 8px;
+        z-index:1000;
+    }
+    .submit{
+        float:right;
+        width:50px;
+        height:40px;
+        margin:5px 5px 0;
+        background:transparent;
+        color:#ADACAD;
+        font-size:14px;
+    }
+
+    .ques_hd{
+        height:44px;
+        line-height:44px;
+        text-align:center;
+        font-size:16px;
+        position:relative;
+        border-bottom:1px solid #DFDFDF;
+        color:#5D5D5D;
+    }
+    .back{
+        position:absolute;
+        left:8px;
+        top:13px;
+        height:18px;
+        width:12px;
+        display:inline-block;  
+    }
+    .back img{
+        width:100%;
+        height:100%;
+        display:block;
+    }
+    .ques_nav{
+        height:32px;
+    }
+    .ques_nav a{
+        display:inline-block;
+        text-decoration:none;
+        text-align:center;
+        width:49%;
+        height:100%;
+        color:#797979;
+        height:32px;
+        line-height:22px;
+        padding:5px 0;
+    }
+    .ques_nav a:first-child span{
+        display:block; 
+        border-right:1px solid #BCBCBC;
+    }
+    .cur{
+        border-bottom:1px solid #ea6948;
+    }
+
+    .kefu,
+    .user{
+        margin-top:4px;
+        margin-bottom:16px;
+        overflow:hidden;
+    }
+
+    .kefu>img{
+        width:40px;
+        height:40px;
+        border:none;
+        display:inline-block;
+        float:left;
+        border-radius:50%;
+    }
+    .kefu>div{
+        margin-left:55px;
+        max-width:210px;
+    }
+    .kefu .k_inf{
+        padding:10px;
+        background:#BBA3F9;
+        color:#fff;
+        font-size:13px;
+        -webkit-border-radius:4px;
+        border-radius:4px;
+        margin-top:12px;
+        position:relative;
+    }
+    .kefu .k_inf:before{
+        content:'';
+        display:block;
+        position:absolute;
+        left:-10px;
+        top:0;
+        width:0;
+        height:0;
+        font-size:0;
+        border-style:solid dashed dashed;
+        border-width:10px;
+        border-color:#BBA3F9 transparent transparent;
+    }
+    .user>img{
+        width:40px;
+        height:40px;
+        border:none;
+        display:inline-block;
+        float:right;
+        border-radius:50%;
+    }
+    .user>div{
+        margin-right:15px;
+        float:right;
+        max-width:210px;
+    }
+    .user .u_inf{
+        display:block;
+        padding:10px;
+        background:#FFFFFF;
+        color:#8F8F8F;
+        font-size:13px;
+        -webkit-border-radius:4px;
+        border-radius:4px;
+        margin-top:12px;
+        position:relative;
+    }
+    .user .u_inf:before{
+        content:'';
+        display:block;
+        position:absolute;
+        right:-10px;
+        top:0;
+        width:0;
+        height:0;
+        font-size:0;
+        border-style:solid dashed dashed;
+        border-width:10px;
+        border-color:#FFFFFF transparent transparent;
+    }
+    .kefu>div>p,.user>div>p{
+        color:#a9a8a8;
+        font-family: 'Microsoft Yahei',Helvetica,Arial,sans-serif,cursive;
+        font-size:12px;
+        padding:5px 0;
+    }
+    .kefu>div>p{text-align:left;}
+    .user>div>p{text-align:right;}
+    </style>
+</head> 
+ 
+<body>
+   
+    <div class="page">
+        <header>
+            <div class="ques_hd">
+                <a class="back" href=""><img src="images/sub_left2.png" alt=""></a>
+                问题反馈
+            </div>
+            <div class="ques_nav">
+                <a class="cur" href="javascript:;"><span>我的问题</span></a><a href="view_question.html">常见问题</a>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="kefu">
+                    <img src="images/log_icon.jpg" alt="">
+                    <div>
+                        <div class="k_inf">
+                          您好，在使用过程中出现问题，欢迎随时反馈。购物相关问题可查看右上角常见问题哦。
+                        </div>
+                        <p>2016-02-23 16:27</p>
+                    </div>
+                </div>
+                <div class="user">
+                    <img src="images/me/no_load.png" alt="">
+                    <div>
+                        <div class="u_inf">用户反馈的信息,这个内容从编辑页面点击提交后得到的。</div>
+                        <p>2016-02-23 16:27</p>
+                    </div>
+                </div>
+                <div class="user">
+                    <img src="images/me/no_load.png" alt="">
+                    <div>
+                        <div class="u_inf">你大爷的</div>
+                        <p>2016-02-23 16:27</p>    
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <a href="view_textarea.html">
+                <img class="write" src="images/question_bianji.png" alt=""><span>我要提问</span>
+                <!-- <input class="bianji" type="text" disabled="true" placeholder="请输入文字" />
+                <input class="submit" type="submit" value="发送" /> -->
+            </a>
+        </footer>
+    </div>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script>
+    var _w = $(window).width(),
+        _h = $(window).height();
+    $('.page').height(_h);
+    //输入框宽度
+    function footer_func(){
+        var $write=$('.write'),$bianji=$('.bianji'),$submit=$('.submit'),
+            a=$write.outerWidth(true),c=$submit.outerWidth(true);
+        $bianji.outerWidth(_w-a-c);
+    };
+    
+    footer_func();
+    
+    </script>
+
+</body>
+</html>

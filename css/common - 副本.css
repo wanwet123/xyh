@@ -1,0 +1,575 @@
+@charset "utf-8";
+/* CSS Document */
+/*reset style*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,select,textarea,p, button,
+table,th,td,blockquote,address,hr,figure,section,nav{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box;}
+fieldset,img{border:0;}
+table{border-collapse:collapse;border-spacing:0;}
+address,caption,cite,code,dfn,em,strong,th,i,var{font-weight:normal;font-style:normal;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+dl,ul,ol,li{list-style:none;}
+input,a{border:0;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);} /*去掉手机端按钮点击出现的蓝色边框*/
+input[type=text],input[type=button]{outline:0;}
+body,th,td,input,select,textarea,button {font-size:12px;font-family:"Helvetica Neue","Microsoft YaHei",Arial, Helvetica, Verdana, Tahoma,sans-serif;}
+img{max-width:100%;vertical-align:middle;border:0;}  /*给img最大宽度设置为100%*/
+input,textarea,button,select,a{-webkit-tap-highlight-color:rgba(0,0,0,0);outline:none;-webkit-appearance:none;appearance:none;border:none;text-decoration:none;}
+a:hover{text-decoration:none;}
+
+body{
+	margin:0 auto;
+	background:#FFF;
+	max-width:640px;
+	min-width:300px;
+	position:relative;
+	-webkit-font-smoothing:antialiase;
+	-webkit-text-size-adjust:100%;
+	-webkit-user-select:none;
+}
+
+.clearfix{zoom:1;}
+.clearfix:after{
+	content:'.';
+	display:block;
+	width:0;
+	height:0;
+	font-size:0;
+	clear:both;
+	visibility:hidden;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.pos_r{
+	position:relative;
+}
+.pos_a{
+	position:absolute;
+}
+
+
+/*placeholder*/
+::-webkit-input-placeholder { /* WebKit browsers */ 
+    color:#808080; 
+    background:transparent;
+} 
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+    color:#808080;  
+    background:transparent;
+} 
+::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+    color:#808080;  
+    background:transparent;
+} 
+:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+    color:#808080; 
+    background:transparent;
+}
+
+/*上面的部分是为了清除浏览器默认的样式，重新对页面进行渲染 reset.css*/
+
+/*下面这个是定义一些颜色，字体等*/
+.col_font{color:#808080;}
+.col_zong{color:#EC6945;}
+.col_sky{color:#2CCBE3;}
+.col_gre{color:#549b36;}
+.bgd{background:#e8e8e8;}
+.bg_zong{background:#EC6945;color:white;}
+.max_640{max-width:640px;}
+.pdbom{padding-bottom:4px;}
+.pdt_8{padding-top:8px;}
+.pdb_2{padding-bottom:2px;}
+.bold{font-weight:bold;}
+.font_14{font-size:14px;}
+.ver_mid{vertical-align:middle;}
+.hide{display:none;}
+.bg_fff{background:#fff;}
+
+/*loading,nomoreinfo*/
+.loading{
+	width:100%;
+	padding:30px 0 20px;
+	text-align:center;
+	background:transparent;
+	margin:0 auto;
+	display:none;
+	clear:both;
+	position:relative;
+	z-index:8;
+	background:#FFF;
+}
+.loading>img{border:none;z-index:8;}
+.nomoreinfo{color:#808080;}  /*无更多信息*/
+
+/*暂无出价*/
+.no_chu{
+	text-align:center;
+	padding:20px 0;
+	font-size:14px;
+	background:#FFF;
+	position:relative;
+	z-index:8;
+}
+
+/*下面是全站都用的*/
+.head_fixed{
+	background:white;
+	height:40px;
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index:30;
+	overflow:hidden;
+	border-bottom:1px solid #E8E8E8;
+}
+.page{
+	position:relative;  
+	-webkit-box-sizing:border-box;
+	-mo-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.wrap{
+	margin:40px 0 44px;
+}
+
+/*头条*/
+#toutiao{
+	position:fixed;
+	height:40px;
+	background:#e60012;
+	top:0;
+	width:100%;
+	max-width:640px;
+	z-index:30;
+	overflow:hidden;
+}
+.top_bg{
+	height:40px;
+	position:absolute;
+	left:18%;
+	top:0;
+}
+.target_herf{
+	display:inline-block;
+	position:absolute;
+	right:12%;
+	width:26px;
+	height:26px;
+	top:7px;
+	border:none;
+	outline:none;
+}
+
+
+/*保底规则问号图标*/
+.one_rule_icon {
+    width:16px;
+    margin:-4px 2px 0;
+}
+
+
+/*头部*/
+
+.nav_bar{
+	overflow:hidden;
+	height:40px;
+	line-height:40px;
+	overflow-x:auto;
+	overflow-y:hidden;
+	position:relative;
+	-webkit-transition:all .2s ease-out;
+	transition:all .2s ease-out;
+}
+.nav_box{
+	position:absolute;
+	left:0;
+	/* width:350px; */  
+	font-size:0;
+}
+.nav_box .cur{
+	color: #EC6945;
+}
+.nav_bar a{
+	display:inline-block;
+	width:76px;
+	text-align:center;
+	font-size:13px;
+	color:#808080;
+	height:100%;
+}
+
+
+
+/*尾部*/
+.bar_tab{
+	width:100%;
+	height:44px;
+	position:fixed;
+	bottom:0;
+	z-index:10;
+	background:#E0D8CE;
+	background:#efeae5;
+	table-layout:fixed;
+}
+.tab_item{
+	position:relative;
+	display:table-cell;
+	width:1%;
+	height:44px;
+	text-align:center;
+	vertical-align:top;
+	color:#929190;
+}
+.tab_item.active{
+	color:#EC6945;
+}
+.tab_item .icon{
+	width:21px;
+	height:21px;
+	display:block;
+	margin:5px auto 0;
+}
+
+
+
+/*夺宝页头部内样式*/
+.info_tips{
+	float:right;
+	width:24px;
+	margin:8px 6px 0 10px;
+	border:none;
+}
+
+
+
+/*详情页或二级页面的头部公共样式*/
+.head_tab{
+    text-align: center;
+    line-height: 39px;
+    font-size: 15px;
+    vertical-align: middle;
+    color:#7E7E7E;
+    border-bottom: 1px solid #E3E3E3;
+}
+.head_tab .back_btn{
+	width: 10px;
+    height: 18px;
+    display: inline-block;
+    position: absolute;
+    top: 11px;
+    left: 0px;
+    padding: 0 20px 0 10px;
+}
+.head_tab>span{
+	position:absolute;
+	left:50%;
+	-webkit-transform:translateX(-50%);
+	-moz-transform:translateX(-50%);
+	transform:translateX(-50%);
+}
+
+
+
+/*最新揭晓公共样式*/
+
+.list_con .list_hd{
+	padding:8px 10px;
+	color:#676767;
+	font-size:14px;
+}
+.list_con .list_hd .list_btn{
+	float:right;
+	color:#676767;
+
+}
+
+.list_con{
+	border-bottom:1px solid #E8E8E8;
+}
+.list_bd{
+	/* padding:0 2.5%; */
+	/* border:1px solid blue; */
+	overflow:hidden;
+}
+.list_bd li{
+	width:26%;
+	float:left;
+	text-align:center;
+	position:relative;
+	display:block;
+	padding:5px 3.5% 8px 3.7%;
+	-webkit-box-sizing:content-box;
+	box-sizing:content-box;
+}
+
+.list_bd li:not(:last-child):after{
+	position:absolute;
+	content:'';
+	display:inline-block;
+	width:1px;
+	height:82%;
+	background:#E8E8E8;
+	right:0%;
+	top:1px;
+}
+.list_bd li dt img{
+	background:#DDD;
+}
+.list_bd li .dao_time{
+	letter-spacing:1px;
+	padding:8px 0 0;
+	font-size:13px;
+	color:#EC6945;
+	/* border:1px solid red; */
+	background:url(../images/time_icon.png) no-repeat left 80%;
+	background-size:14px 14px;
+	padding-left:20px;
+	display:inline-block;
+}
+@media screen and (max-width:330px){
+	.list_bd li dd{
+		font-size:12px;
+	}
+}
+
+
+
+/*全站调用弹窗的时候mask(如果没用objCenter函数)*/
+.mask{
+	position:fixed;
+	top:0;
+	bottom:0;
+	width:100%;
+	background:rgba(0,0,0,.5);
+	z-index:100;
+	display:none;
+	max-width:640px;
+}
+/*夺宝委托拍卖弹窗*/
+.wei_pat_ban{
+   position:fixed;
+   width:80%;
+   top:50%;
+   left:10%;
+   -webkit-transform:translateY(-50%);
+   -moz-transform:translateY(-50%);
+   transform:translateY(-50%);
+   z-index:110;
+   background:#fff;
+   -webkit-border-radius:5px;
+   border-radius:5px;
+   display:none;
+}
+.wei_pat_ban>span{
+   display:block;
+   width:20px;
+   height:20px;
+   position:absolute;
+   top:5px;
+   right:5px;
+   border:1px solid #575757;
+   border-radius:50%;
+   overflow:hidden;
+   padding:10px;
+   -webkit-transform-origin:right top;
+   transform-origin:right top;
+   -webkit-transform:scale(.6);
+   transform:scale(.6);
+}
+
+
+
+
+/*夺宝进度条样式*/
+.duo_prog_bar{
+	margin:8px 12px 3px 10px;
+	background:#B5B5B5;
+	height:3px;
+	position:relative;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+}
+.duo_prog_bar>span{
+	display:inline-block;
+	width:auto;
+	height:100%;
+	background:#EC6945;
+	position:absolute;
+	top:0;
+	left:0;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+}
+
+
+
+
+/*还没有夺宝记录样式--一张img*/
+.no_note{
+	text-align:center;
+	width:24%;
+	margin:50px auto 0;
+}
+
+
+
+/*各种操作后的提示页面*/
+.suc_opt{
+	text-align:center;
+	color:#EC6945;
+	padding:50px 0 0;
+	font-size:16px;
+}
+.suc_opt .target_page{
+	color:white;
+	padding:4px 10px;
+	background:#EC6945;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	font-size:14px;
+	margin:0 5px;
+}
+
+
+
+/*有消息后我在图标右上角的小红点*/
+.has_news:after{
+	content:'';
+	display:inline-block;
+	width:6px;
+	height:6px;
+	background:#EC6945;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	position:absolute;
+	right:8px;
+	top:8px;
+}
+
+
+/*十元，百元角标*/
+.img_b{position:relative;}
+.price_icon{
+	position:absolute;
+	top:0px;
+	left:4px;
+	display:block;
+	width:36px;
+	height:36px;
+	z-index:14;
+	border:none;
+}
+.price_icon img{
+	width:100%;
+	display:block;
+	float:left;
+	border:none;
+}
+
+
+
+
+
+
+/*横栏滑动到顶部后固定时addClass*/
+.fixed_hd{
+	position:fixed;
+	max-width:640px;
+	width:100%;
+	z-index:30;
+}
+
+
+
+/*夺宝大货的预展*/
+.duobao_btn.start_soon{
+	text-align:left;
+	-webkit-border-top-left-radius:0;
+	-webkit-border-bottom-left-radius:0;
+	border-top-left-radius:0;
+	border-bottom-left-radius:0;
+	margin:16px 8px 0 6px;
+	max-width:90%;
+	padding:6px 4px;
+	white-space:nowrap;
+}
+
+
+
+
+/*图片轮播*/
+.slideBox{
+	position:relative;
+	overflow:hidden;
+}
+.slideBox>.bd li img{
+	width:100%;
+}
+.slideBox>.hd{
+	position:absolute;
+	bottom:3px;
+	line-height:10px;
+	height:10px;
+	text-align:center;
+	width:100%;
+}
+.slideBox>.hd>ul>li{
+    display:inline-block; /*inline不能设置宽度*/
+    margin-left:10px;
+    width:6px;
+    height:6px;
+    margin:2px 6px 0 0;
+    background:#fff;
+    border-radius:50%;
+    text-indent:-9999em;
+}
+.slideBox>.hd>ul>li:last-child{
+	margin-right:0;
+}
+.slideBox>.hd>ul>li.on{
+    background:#EC6945;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

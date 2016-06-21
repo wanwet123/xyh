@@ -1,0 +1,252 @@
+.my_duo_item{
+	background:url(../images/me/m_bg.jpg) no-repeat center bottom;
+	background-size:cover;	
+	-webkit-filter:blur(2);
+	color:#fff;
+	position:relative;
+}
+.my_duo_item.no_load{
+	background-image:url(../images/me/no_load_bg.jpg);
+}
+
+.my_duo_inf{
+	padding-top:16px;
+}
+.my_duo_inf:after{
+	position:absolute;
+	content:'';
+	top:0;
+	left:0;
+	width:100%;height:100%;
+	background:rgba(0,0,0,.333);
+	-webkit-filter:blur(10px);
+}
+.inf_inner{
+	position:relative;
+	z-index:4;
+	text-align:center;
+	padding-bottom:16px;
+}
+.avatar{
+	width:80px;
+	height:80px;
+	display:block;
+	margin:0 auto;	
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	border:2px solid #B3AFAC;
+}
+.inf_inner .yin{
+	background:rgba(0,0,0,.888);
+	padding:4px 12px;
+	color:gold;
+	font-weight:bold;
+	display:inline-block;
+	margin-top:-4px;
+	border-radius:12px;
+}
+
+.user_inf h5{
+	font-size:14px;
+	margin:16px 0 4px;
+	color:white;
+	font-weight:bold;
+}
+
+.jifen_bar{
+	background:white;
+	margin-bottom:10px;
+	padding:12px 20px;
+}
+.jifen_bar p{
+	padding:2px 0 4px;
+	color:#ACADAD;
+}
+.jifen_bar .about_ji{
+	float:right;
+	color:#ACADAD;
+}
+.jifen_bar .about_ji img{
+	width:14px;height:14px;
+	margin-top:-4px;
+	margin-left:3px;
+}
+
+.jifen_bar .v_bar{	
+	width:100%;	
+	margin:0 0 2px;
+	padding:0;
+}
+.jifen_bar .v_bar span{
+	display:inline-block;
+	width:50%;
+	height:5px;
+	background:url(../images/me/gray_bar.png) repeat left center;
+	margin-top:0;
+}
+
+.jifen_bar div{
+	position:relative;
+	height:20px;
+	padding-top:2px;
+}
+.jifen_bar .v{
+	position:absolute;
+	top:0;
+	width:21px;
+	height:16px;
+}
+.jifen_bar .v1{left:0;}
+.jifen_bar .v2{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);}
+.jifen_bar .v3{right:0;}
+
+.jifen_bar.jv2 .v_bar span:nth-child(1),
+.jifen_bar.jv3 .v_bar span:nth-child(1){
+	background-image:url(../images/me/zong_bar.png);
+}
+.jifen_bar.jv3 .v_bar span:nth-child(2){
+	background-image:url(../images/me/zong_bar.png);
+}
+
+
+
+.huiyuan{
+	background:white;
+	padding:10px 12px;
+}
+.huiyuan a{
+	display:block;
+	height:26p;line-height:26px;
+	color:#505050;
+}
+.huiyuan .hui_logo{
+	width:26px;
+	height:26px;
+	margin-top:-4px;
+	margin-right:8px
+}
+.huiyuan span{float:right;color:#959191;}
+.huiyuan span img{
+	height:12px;
+	margin-top:-2px;
+	margin-left:4px;
+}
+
+
+
+.user_inf .log_btn{
+	background:rgba(255,255,255,.666);
+	padding:4px 14px;
+	margin:18px 0 13px;
+	display:inline-block;
+	color:#000;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+.user_inf .log_btn:nth-child(1){
+	margin-right:20px;
+}
+
+
+
+
+/*关于积分*/
+.jifen_des{
+	background:white;
+	padding:12px 20px;
+	margin-bottom:10px;
+}
+
+.jifen_des h5{
+	color:#ACADAD;
+	font-weight:bold;
+	font-size:14px;
+}
+.jifen_des h5 img{
+	width:20px;height:20px;
+	margin-top:-6px;
+	margin-right:6px;
+	padding:12px 0 8px;
+}
+.jifen_des p{
+	line-height:160%;
+	color:#5F5F5F;
+	padding-left:6px;
+}
+
+
+.jifen_note{
+	background:white;
+	padding:12px 0 0;
+}
+.jifen_note h5{
+	color:#ACADAD;
+	font-weight:bold;
+	font-size:14px;
+	padding:0 18px 12px;
+}
+.jifen_note div{
+	padding:5px 22px;
+}
+.jifen_note div:nth-child(even){background:#F4F3F3;}
+
+.jifen_note div i{color:#EC6945;}
+.jifen_note div p>span{
+	float: right;
+	color:#EC6945;
+}
+.jifen_note div .time{
+	color:#ACADAD;
+	margin-top:4px;
+	display:inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

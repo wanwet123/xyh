@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+  <meta content="telephone=no" name="format-detection">  
+  <meta content="email=no" name="format-detection"> 
+  <meta name="keywords" content="香友会入香如净，国际沉香供货，交易平台，来入香如净，买放心沉香">
+  <meta name="description" content="入香如净、限时闪购、一级竞拍、商品库、香内参">
+  <title>收货地址</title>
+  <link rel="stylesheet" type="text/css" href="css/common.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/order.css" />
+  <style>
+  .wrap{
+    margin-bottom:40px;
+  } 
+  body{background:#EEE;}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+   
+    <header class="head_fixed max_640 sub_menu">
+      <a href="" class="go_back"><img src="images/sub_left2.png" /></a>
+      <h2 class="sub_title">收货地址</h2>
+    </header>
+        
+
+
+    <div class="wenx_content wrap edit_ads">
+           
+          <div class="add_bar">
+            <a href="">
+              <img class="daohang" src="images/daohang.png" alt="">添加收货地址<span><img src="images/add.png" alt=""></span>
+            </a>
+          </div>
+
+          <div class="opt_bar set">
+            <h5>西门吹牛中<span>18392382928</span></h5>
+            <p>北京市海淀区花园路街道牡丹园东街甲12号</p>
+            <div>
+              <a href=""><img src="images/edit.png" alt=""></a>
+              <span class="del"><img src="images/delete.png" alt=""></span>
+              <span class="set_area"></span>
+            </div>
+          </div>
+
+          <div class="opt_bar">
+            <h5>简简单单<span>17439573957</span></h5>
+            <p>你胃口呢看我发你问问看能否可为您付款呢我开发呢我咖啡呢窝囊废南方可为您复垦为开发呢可能可能分</p>
+            <div>
+              <a href=""><img src="images/edit.png" alt=""></a>
+              <span class="del"><img src="images/delete.png" alt=""></span>
+              <span class="set_area"></span>
+            </div>
+          </div>
+          
+          
+          <a href="javascript:;" class="sure_tijiao ads_tijiao">提交地址</a>
+      
+      
+
+    </div>
+    
+
+      
+
+   
+  </div>
+     
+
+  <script src="js/jquery-1.10.1.min.js"></script>
+
+  <script>
+    $('.set_area').click(function(){
+      var $set = $(this).parents('.opt_bar');
+      if($set.hasClass('set')){
+        return false;
+      }else{
+        $set.addClass('set').siblings().removeClass('set');
+      }
+    });
+    $('.del').click(function(){
+      $(this).parents('.opt_bar').remove();
+    });
+
+  </script>
+</body>
+</html>

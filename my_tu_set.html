@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="telephone=no" name="format-detection">  
+    <meta content="email=no" name="format-detection"> 
+    <meta name="keywords" content="香友会入香如净，国际沉香供货，交易平台，来入香如净，买放心沉香">
+    <meta name="description" content="入香如净、限时闪购、一级竞拍、商品库、香内参">
+    <title>入香如净</title>
+    <style>
+    *{
+        padding:0;
+        margin:0;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+    }
+    html,body{
+        -webkit-user-select:none; 
+        user-select:none;
+        font-family: 'lucida grande','lucida sans unicode',lucida,helvetica,'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei',sans-serif;
+    }
+    a{
+        -webkit-tap-highlight-color:rgba(0,0,0,0);
+    }
+    body{
+        background:#EEE;
+        font-size:14px;
+    }
+    ::-webkit-input-placeholder { /* WebKit browsers */ 
+        color: #A5A5A5; 
+        background:#e5e5e5;
+    } 
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+        color: #A5A5A5; 
+        background:#e5e5e5;
+    } 
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+        color: #A5A5A5; 
+        background:#e5e5e5;
+    } 
+    :-ms-input-placeholder { /* Internet Explorer 10+ */ 
+        color: #A5A5A5; 
+        background:#e5e5e5;
+    }
+    .page{
+        position:relative;
+    }
+    header,main,footer{display:block;position:absolute;}
+    header{
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        height:76px;
+        background:#fff;
+        z-index:100;
+    }
+    footer{
+        position:fixed;
+        bottom:0;
+        left:0;
+        right:0;
+        height:50px;
+        line-height:50px;
+        background:#fff;
+        border-top:1px solid #E5E5E5;
+        overflow:hidden;
+        z-index:100;
+        text-align:center;
+    }
+    footer span{
+        display:inline-block;
+        color:#EA6948;
+    }
+    body{
+        background:#fff;
+    }
+    main{
+        position:absolute;
+        top:76px;
+        bottom:20px;
+        -webkit-overflow-scrolling:touch;
+        overflow-y:auto;
+        width:100%;
+        z-index:10;
+
+    }
+    .content{
+        /* height:200px; */  
+        padding:10px 16px;
+    }
+    .write{
+        height:20px;
+        width:20px;
+        display:inline-block;
+        vertical-align:middle; 
+        margin:0px 12px 0 0;
+    }
+    .bianji,.submit{
+        display:inline-block;
+        outline:none;
+        border:none;
+        -webkit-tap-highlight-color:rgba(0,0,0,0);
+        -webkit-appearance:none;
+        appearance:none;
+    }
+    .bianji{
+        background:#e5e5e5;
+        height:34px;
+        margin-top:8px;
+        width:220px;
+        float:left;
+        -webkit-border-radius:3px;
+        border-radius:3px;
+        padding:0 8px;
+        z-index:1000;
+    }
+    .submit{
+        float:right;
+        width:50px;
+        height:40px;
+        margin:5px 5px 0;
+        background:transparent;
+        color:#ADACAD;
+        font-size:14px;
+    }
+
+    .ques_hd{
+        height:44px;
+        line-height:44px;
+        text-align:center;
+        font-size:16px;
+        position:relative;
+        border-bottom:1px solid #DFDFDF;
+        color:#5D5D5D;
+    }
+    .back{
+        position:absolute;
+        left:8px;
+        top:13px;
+        height:18px;
+        width:12px;
+        display:inline-block;  
+    }
+    .back img{
+        width:100%;
+        height:100%;
+        display:block;
+    }
+    .ques_nav{
+        height:32px;
+    }
+    .ques_nav a{
+        display:inline-block;
+        text-decoration:none;
+        text-align:center;
+        width:49%;
+        height:100%;
+        color:#797979;
+        height:32px;
+        line-height:22px;
+        padding:5px 0;
+    }
+    .ques_nav a:first-child span{
+        display:block; 
+        border-right:1px solid #BCBCBC;
+    }
+    .cur{
+        border-bottom:1px solid #ea6948;
+    }
+    .fabu_btn {
+        width: 80px;
+        height: 80px;
+        position: relative;
+    }
+    .fabu_btn img{
+        width:100%;
+    }
+    input[type=file] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .01;
+        filter: alpha(opacity=1);
+        cursor: pointer;
+        z-index: 1;
+        outline: none;
+        -webkit-appearance: none;
+        appearance: none;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+    .get_img{
+        color:#7E7E7E;
+        display:block;
+        padding:10px 0;
+    }
+    .get_img>div{
+        width:50%;
+        display:block;
+        float:left;
+        text-align:center;
+    }
+    .get_btn{
+        margin:10px auto;
+    }
+    .get_img .get_cun{
+        display:block;
+        width:80px;
+        height:80px;
+        margin:10px 0;
+        background:#EA6948;
+        color:white;
+        text-align:center;
+        line-height:80px;
+        -webkit-border-radius:8px;
+        border-radius:8px;
+    }
+    #clipBtn{
+        display:block;
+        width:80px;
+        height:80px;
+        margin:10px auto;
+        background:#EA6948;
+        color:white;
+        text-align:center;
+        line-height:80px;
+        -webkit-border-radius:8px;
+        border-radius:8px;
+        -webkit-tap-hightlight-color:rgba(0,0,0,0);
+        -webkit-appearance:none;
+        appearance:none;
+        border:none;
+        border-bottom:4px solid #A72E0F;
+        font-size:14px;
+        -webkit-transition:all .3s ease;
+        transition:all .3s ease;
+    }
+    #clipBtn:ative{
+        border-bottom:none;
+     }
+    </style>
+</head> 
+ 
+<body>
+   
+    <div class="page">
+        <header>
+            <div class="ques_hd">
+                <a class="back" href=""><img src="images/sub_left2.png" alt=""></a>
+                个人设置
+            </div>
+            <div class="ques_nav">
+                <a class="cur" href="javascript:;"><span>我的头像</span></a><a href="my_name_set.html">我的昵称</a>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div style="margin:10px auto;height:280px;background:rgba(0,0,0,.5);"></div>  <!--你的剪裁块-->
+                <div class="get_img">
+                    <div>
+                        第一步:
+                        <div class="get_btn fabu_btn">
+                            <img src="images/fabu_btn.png" alt="">
+                            <input class="getTu" type="file" accept="image/*">
+                        </div>
+                    </div>
+                    <div>
+                        第二步:
+                        <p id="clipBtn" class="get_cun">截取保存</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    var flag = true;
+    var waitFunc = function(){
+        var wait = '<div id="wait"><img src="images/load13.gif"></div>';
+        var $body = $(document.body);
+        $body.append(wait);
+        $('#wait').css({
+            'width':'100%',
+            'position':'fixed',
+            'top':0,
+            'bottom':0,
+            'background':'rgba(0,0,0,.46)',
+            'z-index':1000
+        });
+        $('#wait>img').css({
+            'width:':'50px',
+            'height':'50px',
+            'position':'absolute',
+            'top':'50%',
+            'left':'50%',
+            'margin':'-35px 0 0 -25px'
+        });
+        flag = false;
+        //然后判断加载完成
+        if(!flag){
+            $('#wait').remove();
+        }
+    }
+    waitFunc();
+    </script>
+    <script>
+    var _w = $(window).width(),
+        _h = $(window).height();
+    $('.page').height(_h);
+    //输入框宽度
+    function footer_func(){
+        var $write=$('.write'),$bianji=$('.bianji'),$submit=$('.submit'),
+            a=$write.outerWidth(true),c=$submit.outerWidth(true);
+        $bianji.outerWidth(_w-a-c);
+    };
+    
+    footer_func();
+    
+    </script>
+
+</body>
+</html>

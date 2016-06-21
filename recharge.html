@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+  <meta content="telephone=no" name="format-detection">  
+  <meta content="email=no" name="format-detection"> 
+  <meta name="keywords" content="香友会入香如净，国际沉香供货，交易平台，来入香如净，买放心沉香">
+  <meta name="description" content="入香如净、限时闪购、一级竞拍、商品库、香内参">
+  <title>会币充值</title>
+  <link rel="stylesheet" type="text/css" href="css/common.css" /> 
+ 
+  <style>
+  body{background:#eee;}
+  .wrap{
+    margin-bottom:80px;
+  }
+  /*placeholder*/
+  ::-webkit-input-placeholder { /* WebKit browsers */ 
+      color:#ADADAD; 
+      background:transparent;
+  } 
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+      color:#ADADAD;  
+      background:transparent;
+  } 
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+      color:#ADADAD;  
+      background:transparent;
+  } 
+  :-ms-input-placeholder { /* Internet Explorer 10+ */ 
+      color:#ADADAD; 
+      background:transparent;
+  }
+ 
+  .m_tx{padding:10px 12px;color:#808080;font-size:14px;background:#fff;}
+  .m_tx p{font-size:12px;}
+  .m_tx .user_opt{background:#eee;color:#B1B1B1;color:#233;width:100px;text-align:center;padding:12px 0;margin:12px 0 16px;border-radius:4px;}
+  .m_tx .wei_num{background:#eee;color:#B1B1B1;width:100%;height:40px;line-height:40px;border-radius:4px;margin-top:10px;text-align:center;color:#233;font-size:14px;}
+  .chong{
+    padding:8px 10px;
+    background: #FFF;
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    bottom: 0;
+    font-size: 14px;
+    z-index: 120;
+  }
+  .chong span{
+    float:left;
+    height:34px;
+    line-height:34px;
+    color:#808080;
+  }
+  .put_order{
+    height:34px;
+    line-height:34px;
+    float:right;
+    background:#EC6945;
+    color:#FFF;
+    padding:0 18px;
+    border-radius:4px;
+  }
+  .pay_style{
+    padding:16px;
+  }
+
+  .pay_style.on{
+  background:#FFF;
+}
+  .pay_style .p_icon{
+  width:26px;
+  height:26px;
+  margin-right:8px;
+  vertical-align:middle;
+}
+  .pay_style span{
+  color:#989898;
+  margin-left:10px;
+}
+  .pay_style i{
+  display:inline-block;
+  float:right;
+  width:16px;
+  height:16px;
+  margin-top:4px;
+  background:url(images/s_btn.png) no-repeat right center;
+  background-size:16px 16px;
+}
+  .pay_style.on i{
+  background-image:url(images/s_btn2.png);
+}
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+   
+    <header class="head_fixed max_640 sub_menu">
+      <a href="" class="go_back"><img src="images/sub_left2.png" /></a>
+      <h2 class="sub_title">会币充值</h2>
+    </header>
+        
+
+
+    <div class="wenx_content wrap">
+       
+      <img src="images/tx_ban.png" alt="">
+      <div class="hui_tx">
+         
+         <div class="m_tx">
+           <form action="" method="">
+             <input id="user_opt" class="user_opt" type="tel" placeholder="请输入整数">
+             <span><i style="font-size:12px;">x</i>100&nbsp;=</span>
+             <span class="col_zong ti_price">100会币</span>           
+           </form>
+         </div>
+        
+      </div>
+
+      <p style="padding:12px 16px;color:#808080;">请选择支付方式：</p>
+
+      <div class="pay_style on"><img class="p_icon" src="images/we_pay.png" alt="">微信支付<i></i></div>
+
+      <div class="chong"><span>共需支付：<i class="col_zong">0元</i></span><a href="" class="put_order" id="put_order">确认充值</a></div>
+ 
+     
+        
+       
+      
+
+    </div>
+    
+      
+
+      
+
+   
+  </div>
+     
+
+  <script src="js/jquery-1.10.1.min.js"></script>
+
+  <script>
+    
+     $('#user_opt').bind('keyup',function(){
+        var $val = $(this).val();
+         if($(this).val() != ''){
+            $('.ti_price').html($val*100+'会币');
+            $('.chong i').html($val*100+'元');
+         }else{
+            $('.ti_price').html(0+'会币');
+            $('.chong i').html(0+'元');
+         }
+     });
+
+  </script>
+</body>
+</html>

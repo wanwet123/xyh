@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+  <meta content="telephone=no" name="format-detection">  
+  <meta content="email=no" name="format-detection"> 
+  <meta name="keywords" content="香友会入香如净，国际沉香供货，交易平台，来入香如净，买放心沉香">
+  <meta name="description" content="入香如净、限时闪购、一级竞拍、商品库、香内参">
+  <title>拍卖</title>
+  <link rel="stylesheet" type="text/css" href="css/common.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <link rel="stylesheet" type="text/css" href="css/pai.css" />
+  
+  <style> 
+  .wrap{
+    margin-bottom:80px;
+    /* margin-top:100px; */
+    margin-top:112px;
+  }
+  body{background:#FFF;}
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+   
+    <header class="head_fixed max_640 head_tab">
+      <div class="pai_menu"><a href="pai.html">拍卖</a><a class="on" href="pai_no_note.html">我的拍卖</a><span id="pai_rule">拍卖规则</span></div>
+    </header>
+       
+    <div class="my_pai_inf max_640"> 
+      <img class="avatar" src="http://wxpic.4006188666.com/upimg/tx/20160410/146026750440020_1.jpg" alt="头像">
+      <div class="user_inf">
+        <p>你傻啊</p>
+        <div>
+          <span>ID:75534</span>
+          <p class="user_tab">
+              <a class="act" href="jing2016my.php?mid=75534&amp;tjr=6f82008623a624cf6692f398aac46438">所有</a>
+              <a href="jing2016my.php?mid=75534&amp;z=1&amp;tjr=6f82008623a624cf6692f398aac46438">中标</a>
+          </p>
+        </div>
+      </div>
+    </div>
+     
+
+
+    <div class="wenx_content wrap">
+
+       <!--规则内容-->
+       <div class="rule_con"><span id="close_rule" class="close_rule"><img src="images/close_icon.png" /></span><div class="rule_img"><img src="images/pai_process.png" /></div></div>
+       
+       
+       <img class="no_note" src="images/no_note.png" alt="">
+      
+
+       
+
+      
+
+    </div>
+    
+       
+
+       <!--呼出首页模块-->
+      <div class="switchBtn" id="switchBtn"><img src="images/idx/switchBtn.png" alt="呼出首页模块" /></div> 
+      <!--首页模块-->
+      <div class="idx_module" id="idx_module">
+          <span class="idx_close" id="idx_close"><img src="images/idx/idx_clo.png" alt="关闭首页模块" /></span>
+          <div class="idx_notice">
+              <img class="laba_icon" src="images/idx/notice.png" alt="公告" />
+              <div id="marquee" class="marquee">
+                <div id="holder">
+                  <ul>
+                    <li><a href="">您要找的奇楠佛珠已经上线了，快去看看吧!~</a></li>
+                    <li><a href="">沉香佛珠最近促销中，有惊喜啊！</a></li>
+                    <li><a href="">本场最受大家喜爱的沉香手串！！！</a></li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+          <div class="idx_inner" id="idx_inner">
+             <div class="idx_int">
+                <a class="shan square" href="shan.html">
+                  <div>
+                    <p>限时闪供</p>
+                    <span>高级供应权限 限时闪</span>
+                  </div>
+                </a>
+                <a class="pai square mgr" href="pai.html">
+                  <div>
+                    <p>一级竞拍</p>
+                    <span>沉香一级竞拍 公平公正</span>
+                  </div>
+                </a>
+                <a class="ku square" href="source.html">
+                  <div>
+                    <p>商品库</p>
+                    <span>绝对权限 一对一供应</span>
+                  </div>
+                </a>
+                <a class="dong square mgr" href="news_xc.html">
+                  <div>
+                    <p>香内参</p>
+                    <span>国际沉香行情在线动态</span>
+                  </div>
+                </a>
+                <a class="my_cen" href="">
+                  <span class="col_red">-富邦香友会-</span>
+                  <img class="me_icon" src="images/idx/me_cen.png" />
+                </a>
+             </div>
+             <div class="idx_inb">
+               <img src="images/idx/user_icon.jpg" />
+               <h2>那布施 拍卖专家</h2>
+               <p>希望以我们一流的专家鉴定团队、科学的运营管理机制、专业全面的客户服务和锐意进取的创新精神，给您一个更广阔的艺术品交流平台。</p>
+             </div>
+          </div>
+          <div class="idx_foot"><img src="images/idx/lian_icon.png" /></div>
+      </div>
+
+ 
+
+   
+  </div>
+     
+
+  <script src="js/jquery-1.10.1.min.js"></script>
+  <script src="js/tool_func.js"></script>  <!--工具函数最后放在jquery里面-->
+
+  <script>
+  
+
+  //点击规则弹出
+  function pop(obj,m){   //第二个参数代表是否有mask，这个参数可以随便写
+     obj.style.display = 'block';
+     if(arguments.length>=2){
+        var mask = document.createElement('div');
+        mask.className = 'mask';
+        
+        document.body.appendChild(mask);
+        mask.style.display = 'block';
+     }
+  }
+  myAddEvent($$('pai_rule'),'click',function(){
+    pop($('.rule_con')[0],'t')
+  });
+  myAddEvent($$('close_rule'),'click',function(){
+    $('.rule_con')[0].style.display = 'none';
+    document.body.removeChild($('.mask')[0]);
+  });
+  
+
+  //实时调整首页按钮的right，用于在PC上显示相同位置
+    ;(function(doc){
+      var winW = doc.documentElement.clientWidth || doc.body.clientWidth;
+      var sizeW = 640;
+      var orgt = 20;
+      var rgt = winW>640?(parseInt((winW-sizeW)/2) + orgt):orgt;
+      document.getElementById('switchBtn').style.right = rgt + 'px';
+    })(document);
+
+    //按钮切换--公共部分
+     function switch_idx(){
+           var switchBtn = $$('switchBtn');
+           var idx_module = $$('idx_module');
+           var idx_clo = $$('idx_close');
+           var idx_inner = $$('idx_inner');
+           ele_mid(idx_inner);     
+           function idx_slide(){  
+              idx_module.style.filter = 'alpha(opacity=100)';
+              idx_module.style.opacity = 1; 
+              idx_module.style.webkitTransform = 'translate3d(0,0,0)';
+              switchBtn.style.display = 'none';
+           }
+           myAddEvent(switchBtn,'click',idx_slide);
+           myAddEvent(idx_clo,'click',function(){
+              idx_module.style.webkitTransform = 'translate3d(100%,0,0)';
+              switchBtn.style.display = 'block';
+           });
+     }
+     switch_idx();
+
+  //公告消息滚动
+  function Imarquee(height,speed,delay){
+          var scrollT;
+            var pause = false;
+            var ScrollBox = document.getElementById("marquee");
+            if(document.getElementById("holder").offsetHeight <= height) return;
+            var _tmp = ScrollBox.innerHTML.replace('holder', 'holder2')
+            ScrollBox.innerHTML += _tmp;
+            ScrollBox.onmouseover = function(){pause = true}
+            ScrollBox.onmouseout = function(){pause = false}
+            ScrollBox.scrollTop = 0;
+            function start(){
+               scrollT = setInterval(scrolling,speed);
+               if(!pause) ScrollBox.scrollTop += 2;
+            }
+            function scrolling(){
+                if(ScrollBox.scrollTop % height != 0){
+                    ScrollBox.scrollTop += 2;
+                    if(ScrollBox.scrollTop >= ScrollBox.scrollHeight/2) ScrollBox.scrollTop = 0;
+                }
+                else{
+                    clearInterval(scrollT);
+                    setTimeout(start,delay);
+                }
+              }
+          setTimeout(start,delay);
+        }
+
+   Imarquee(22,30,3000); /*移动高度,移动速度,间隔时间*/ //调用
+ 
+
+    
+
+
+  
+
+  //滑动后固定条的位置
+
+  (function(){
+      function set_fixed_bar(a,b,c){
+         var $a=$(a),$b=$(b),$c=$(c),$w=$('.wrap');
+         var $a_h = $a.outerHeight(true);
+         var $b_h = $b.outerHeight(true);
+         var $c_h = $c.outerHeight(true);
+         var a1 = '<div class="a1" style="height:'+$a_h+'px;"></div>';
+         var $c_next = $c.next();
+
+         //头条存在的时候
+         if($a.length>0){
+           if($('.a1').length == 0){
+              $(a).after(a1);
+           }else{
+              return;
+           }
+           if($(b).length>0){
+             var $b_t = $(b).length?$a_h:0;
+             $b.css('top',$b_t);
+             $w.css('margin-top',$b_h);
+           }else{
+             $w.css('margin-top',0);
+           }
+           
+         }else{
+           //如果头条和标题栏都不存在
+           if(!$b.length){
+             $w.css('margin-top',0);
+           }
+         }
+         //获取滑动悬浮框的offset().top
+         if($(c).length>0){
+           var $c_t = $(c).offset().top;
+           var $scroll_t = $c_t - ($a_h+$b_h);
+           document.addEventListener('scroll',function(){
+             var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+             if(scrollTop >= $scroll_t){
+                $c.addClass('fixed_hd').css({
+                  'top':$a_h+$b_h
+                });
+                $c_next.css('margin-top',$c_h)
+             }else{
+                $c.removeClass('fixed_hd');
+                $c_next.css('margin-top',0);
+             }
+           },false);
+         }
+      }
+
+      set_fixed_bar('.head_fixed','.my_pai_inf','.time_hd');
+      
+      $(window).resize(function(){
+         set_fixed_bar('.head_fixed','.my_pai_inf','.time_hd');
+      });
+  })();
+  
+  
+    
+
+
+   
+  </script>
+</body>
+</html>

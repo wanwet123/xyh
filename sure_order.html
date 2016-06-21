@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+  <meta content="telephone=no" name="format-detection">  
+  <meta content="email=no" name="format-detection"> 
+  <meta name="keywords" content="香友会入香如净，国际沉香供货，交易平台，来入香如净，买放心沉香">
+  <meta name="description" content="入香如净、限时闪购、一级竞拍、商品库、香内参">
+  <title>确认订单</title>
+  <link rel="stylesheet" type="text/css" href="css/common.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/order.css" />
+  <style>
+  .wrap{
+    margin-bottom:40px;
+  } 
+
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+   
+    <header class="head_fixed max_640 sub_menu">
+      <a href="" class="go_back"><img src="images/sub_left2.png" /></a>
+      <h2 class="sub_title">确定订单</h2>
+    </header>
+        
+
+
+    <div class="wenx_content wrap sure_order">
+          <div class="dlt_address">
+            <a href="">
+              <div class="dlt_add">
+                <!-- <p class="dlt_name">香友会用户001 18353183303</p>
+                <p>北京市海淀区牡丹园东街甲12号香友会</p> -->
+                <p class="dlt_name">香友会用户001,18353183303,北京市海淀区牡丹园东街甲12号香友会</p>
+              </div>
+              <img class="edit_add" src="images/ar_icon.png" />
+            </a>
+          </div> 
+
+          <div class="pay_inf">
+              <a href=""><img src="images/prt1.png" alt="" class="goods"></a>
+              <div class="pay_text">
+                <h5>标题让我婆婆额外你越南芽庄沉水棋楠标题让我婆婆额外你越南芽庄沉水棋楠标题让我婆婆额外你越南芽庄沉水棋楠</h5>
+                <span style="margin-top:10px;display:inline-block;">共两件商品</span>
+                <p><span class="col_zong"><b class="font_14">¥200.00</b>/件</span><span style="margin-top:2px;" class="fr">2015-07-10 08:07</span></p>
+              </div>
+          </div>
+          <div class="pay_box">
+            <p><span>配送费用：</span><span>0元</span></p>
+            <p><span>实际付款：</span><span class="bold col_zong">400.00元</span></p>
+            <p>支付方式：</p>
+            <div class="pay_style on"><img class="p_icon" src="images/hb_icon.png" alt="">会币支付<span>会币余额577枚</span><i></i></div>
+            <div class="pay_style"><img class="p_icon" src="images/we_pay.png" alt="">微信支付<i></i></div>
+          </div>  
+          <a href="javascript:;" class="sure_tijiao">确认支付</a>
+          <!--会币余额不足-->
+          <a href="javascript:;" class="sure_tijiao" style="background:#B5B5B5;color:#fff;">会币余额不足！</a>
+
+          <div class="attention">
+            <p>会币支付为平台唯一快捷支付方式</p>
+            <p>会币使用只在wenxiang.4006188666.com域名下有效</p>
+            <p>会币作为货币使用的比例为1:1，即1元=1枚会币</p>
+            <p>关于如何购买会币等问题，您的金额客服将为您解答</p>
+            <p>以上所有解释权归香友会所有</p>
+          </div>
+       
+
+     
+        
+       
+      
+
+    </div>
+    
+
+      
+
+   
+  </div>
+     
+
+  <script src="js/jquery-1.10.1.min.js"></script>
+  <script>
+    $('.pay_style').click(function(){
+      if($(this).hasClass('on')){
+        return false;
+      }else{
+        $(this).addClass('on').siblings().removeClass('on');
+      }
+    });
+
+  </script>
+</body>
+</html>

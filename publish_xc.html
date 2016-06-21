@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--下面三条是为了让微信浏览器一直上线拉取页面，避免缓存-->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+  <meta content="telephone=no" name="format-detection"> 
+  <meta content="email=no" name="format-detection">
+  <title>我要发布</title>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+ <style>
+ body{
+   background:#EEE;
+ }
+ .clearfix:after{
+   content:'';
+   display:block;
+   clear:both;
+   visibility:hidden;
+   height:0;
+ }
+ .pub_area{
+   background:#FFF;
+   padding:4px 20px 12px;
+   position:relative;
+ }
+ .fabu_btn{
+   width:80px;
+   height:80px;
+   position:relative;
+ }
+ input[type=file]{
+   position:absolute;
+   left:0;
+   top:0;
+   width:100%;
+   height:100%;
+   opacity:.01;
+   filter:alpha(opacity=1);
+   cursor:pointer;
+   z-index:1;
+   outline:none;
+   -webkit-appearance:none;
+   appearance:none;
+   -webkit-tap-highlight-color:rgba(0,0,0,0);
+ }
+ .getTu{
+   
+ }
+ .fabu_title{
+   border-bottom:1px solid #EDEDED;
+   display:block;
+   width:100%;
+   padding:8px 0;
+   -webkit-box-sizing:border-box;
+   box-sizing:border-box;
+   font-size:14px;
+   outline:none;
+   color:#9D9C9C;
+   -webkit-appearance:none;
+   appearance:none;
+   -webkit-tap-highlight-color:rgba(0,0,0,0);
+ }
+ .fabu_text{
+   resize:none;
+   margin:10px 0;
+   display:block;
+   width:100%;
+   border:none;
+   outline:none;
+   color:#9D9C9C;
+   background:white;
+   -webkit-appearance:none;
+   -webkit-tap-highlight-color:rgba(0,0,0,0);
+   -webkit-box-sizing:border-box;
+   box-sizing:border-box;
+ }
+ 
+ .pub_hd{
+   background:white;
+   border-bottom:1px solid #EDEDED;
+   height:40px;
+   line-height:40px;
+   padding:0 20px;
+   font-size:12px;
+   text-align:center;
+ }
+ .pub_hd>*{
+   display:inline-block;
+ }
+ .pub_hd a{
+   color:#EC6945;
+   float:left;
+   text-decoration: none;
+   font-size:14px;
+ }
+ .pub_hd h5{
+   font-size:14px;
+ }
+ .pub_hd form{
+   float:right;
+ }
+ .pub_hd form input{
+   background:#EC6945;
+   color:#FFF;
+   padding:4px 10px;
+   border-radius:3px;
+   border:none;
+   outline:none;
+   -webkit-appearance:none;
+   appearance:none;
+   -webkit-tap-highlight-color:rgba(0,0,0,0);
+ }
+ </style>
+</head>
+<body>
+
+
+<div class="wrap" id="wrap" style="margin-top:0;">
+
+  <nav class="pub_hd">
+    <a class="back" href="javascript:window.history.back(-1);">取消</a>
+    <h5>编辑</h5>
+    <form action="" method="">
+      <input type="submit" value="发送" />
+    </form>
+  </nav>
+
+<section class="article pub_area">
+     <form action="" method="">
+       <input class="fabu_title" type="text" placeholder="标题" />
+       <textarea class="fabu_text" name="" cols="30" rows="6" placeholder="写下你想说的吧~"></textarea>
+     </form>
+     
+     <div class="fabu_btn">
+       <img src="images/fabu_btn.png" alt="" />
+       <input class="getTu" type="file" accept="image/*">
+       <!-- <input class="getTu" type="file" accept="images/*;capture=camera" value="拍照" /> -->
+       
+
+     </div>
+    
+</section>
+
+   
+ 
+  
+  
+  
+</div>
+
+
+ 
+</body>
+</html>

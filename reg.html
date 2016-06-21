@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+  <meta content="telephone=no" name="format-detection">  
+  <meta content="email=no" name="format-detection"> 
+  <meta name="keywords" content="香友会入香如净，国际沉香供货，交易平台，来入香如净，买放心沉香">
+  <meta name="description" content="入香如净、限时闪购、一级竞拍、商品库、香内参">
+  <title>注册</title>
+  <link rel="stylesheet" type="text/css" href="css/common.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/reg_log.css" />
+  <style>
+  .wrap{
+    margin-bottom:40px;
+  } 
+  body{background:#FFF;}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+   
+    <header class="head_fixed max_640 sub_menu">
+      <a href="" class="go_back"><img src="images/sub_left2.png" /></a>
+      <h2 class="sub_title">注册新账号</h2>
+    </header>
+        
+
+
+    <div class="wenx_content wrap reg_wrap">
+
+        <form class="reg_form" action="" method="">
+            <div class="bor_bom phone"><input type="tel" class="inf" placeholder="手机号"></div>
+            <div class="bor_bom yan"><input class="yan_text inf" type="tel" placeholder="验证码"><input id="yan_btn" class="yan_btn" type="button" value="发送验证码" /></div>
+            <div class="bor_bom psd"><input id="psd_text" class="psd_text inf" type="password" placeholder="设置密码" /><span id="hide_show" class="hide_show"><img src="images/log_hide.png" alt="" /></span></div>
+            <div class="reg"><input class="reg_btn" type="submit" value="注册"></div>
+        </form>
+        <div class="log_b"><a href="log.html">直接登录</a></div>
+        <div class="code" id="code" style="display: none;"><img class="code_inner" src="images/yifa.png" alt="已经发送" /></div>   
+          
+
+    </div>
+    
+
+      
+
+   
+  </div>
+     
+
+  <script src="js/jquery-1.10.1.min.js"></script>
+  <script src="js/reg_log.js"></script>
+
+  <script>
+    $('.inf').focus(function(){
+      $(this).parent('div').css('border-color','#EC6945').siblings().css('border-color','#e8e8e8');
+    }).blur(function(){
+      $(this).parent('div').css('border-color','#e8e8e8');
+    });
+    $('.reg_btn').click(function(){
+      $.each($('.inf'),function(){
+        if($(this).val() == ''){
+          var $name = $(this).attr('placeholder');
+          alert('您的'+$name+'没有输入！');
+        }
+      });
+    });
+    
+    //全部不为空时注册的背景变色
+    $('.inf').each(function(){
+      var $this = $(this);
+      var flag = true;
+      $this.bind('keyup',function(){
+          $.each($('.inf'),function(){
+            if($(this).val() == ''){
+              flag = false;
+            }
+          });
+          if(!flag){
+            $('.reg_btn').css('background','rgba(236,105,69,.666)');
+            flag = true;
+          }else{
+            $('.reg_btn').css('background','rgba(236,105,69,1)');
+          }
+      });
+    });
+
+  </script>
+</body>
+</html>

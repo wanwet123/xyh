@@ -1,0 +1,202 @@
+/*地址页面样式*/
+body{
+    background:#FFF;
+    padding-left:calc(100vw - 100%);
+    font-size:14px;
+    /* overflow-y:scroll; */
+ }
+ .dqld_div{
+    width:100%;
+    background-color:#E8EDFC;
+    /* background:#F3FFEC; */
+    background:#F0F2F7;
+  }
+
+  .dqld_div ul{
+    width:92%;
+    margin:0 auto;
+  }
+  #addAddress{
+    /* background:pink;
+    padding-bottom:20px; */
+    position:relative;
+    z-index:10;
+  }
+  .dqld_div ul{
+    margin-top:10px;
+  }
+  .dqld_div ul li{
+    height:35px;
+    line-height:35px;
+    border-bottom:1px solid #cccccc;
+    cursor:pointer;
+    color:#3E3E3E;
+  }
+  
+  /*下面获得的三个接口*/
+  .addressGe{
+    position:absolute;
+    top:0;
+    left:0;
+    display:none;
+    visibility:hidden;
+  }
+  .addressGe>input{
+     display:inline-block;
+     width:30%;
+  }
+
+.adsArea{
+  background:#FFF;
+  margin-top:20px;
+  margin-bottom:10px;
+  padding-left:16px;
+  padding-right:16px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+
+/*邮编去掉右侧的加减 type=number*/
+input::-webkit-outer-spin-button,  /**/
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    -ms-appearance:none !important;
+    -moz-appearance:none !important;
+    margin: 0; 
+}
+input[type="number"]{-moz-appearance:textfield;}  /*firefox*/
+
+/*textarea去掉右下角*/
+textarea{
+  resize:none;
+  border:none;
+  outline:none;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.adsForm>div{
+  padding:15px 0;
+  border-bottom:1px solid #E8E8E8;
+}
+.adsForm>div>label{
+  display:inline-block;
+  padding-right:12px;
+  color:#808080;
+}
+.adsForm>div>label[for="name"]>span{
+  visibility:hidden;
+  filter:alpha(opacity=0);
+  -moz-opacity:0;
+  opacity:0;
+}
+.adsForm>div.jieDetail{
+  min-height:50px;
+}
+.adsForm>div>input{
+  border:none;
+  outline:none;
+  font-size:14px;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -ms-appearance:none;
+  appearance:none;
+  -webkit-border-radius:0;
+  -moz-border-radius:0;
+  border-radius:0;
+}
+
+@media screen and (min-width:641px){
+  .adsForm>div>input{
+    min-width:400px;
+  }
+}
+
+
+
+/*每栏后面的图标*/
+.receiver{
+  background:url(../images/receiver_icon.png) no-repeat right center;
+  background-size:20px 18px;
+}
+.phone{
+  background:url(../images/phone_icon.png) no-repeat right center;
+  background-size:20px 18px;
+}
+.loca{
+  background:url(../images/loca_icon.png) no-repeat right center;
+  background-size:20px 18px;
+}
+
+
+::-webkit-input-placeholder { /* WebKit browsers */ 
+    color:#BFBFBF; 
+    background:transparent;
+} 
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+    color:#BFBFBF;  
+    background:transparent;
+} 
+::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+    color:#BFBFBF;  
+    background:transparent;
+} 
+:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+    color:#BFBFBF; 
+    background:transparent;
+}
+
+
+
+/*保存地址按钮*/
+.cun_address{
+  display:block;
+  margin:60px 20px 0 20px;
+  padding:10px 0;
+  text-align:center;
+  -webkit-border-radius:2px;
+  border-radius:2px;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  outline:none;
+}
+
+
+/*保存收货地址*/
+.saveAddress{
+    display:block;
+    width:90%;
+    margin:60px auto 20px;
+    padding:10px 0;
+    text-align:center;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-appearance:none;
+    appearance:none;
+    font-size:14px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
