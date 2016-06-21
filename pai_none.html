@@ -176,9 +176,20 @@
      
 
   <script src="js/jquery-1.10.1.min.js"></script>
-  <script src="js/tool_func.js"></script>  <!--工具函数最后放在jquery里面-->
-
   <script>
+  //对于fixed定位的元素，当页面最大宽度设置为640时，在pc上显示正常
+    function setFixedLocal(obj){
+      var winW = document.documentElement.clientWidth || document.body.clientWidth;
+      var isFixed = getStyle(obj,'position');
+      var o_w = getStyle(obj,'width');
+      if(isFixed && winW>640){
+        var o_w2 = 640*parseInt(o_w)/100;
+        //alert(typeof o_w);  //o_w是string类型
+        obj.style.maxWidth = o_w2 + 'px';
+        obj.style.left = Math.floor((winW-o_w2)/2)+'px';
+      }
+    }
+    setFixedLocal($('.xin_hui')[0]);
   
   //信用会币不足
   function pop(obj,m){   //第二个参数代表是否有mask，这个参数可以随便写
