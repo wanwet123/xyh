@@ -302,6 +302,7 @@
            var idx_module = $$('idx_module');
            var idx_clo = $$('idx_close');
            var idx_inner = $$('idx_inner');
+           var w = document.documentElement.clientWidth || document.body.clientWidth;
            ele_mid(idx_inner);     
            function idx_slide(){  
               idx_module.style.filter = 'alpha(opacity=100)';
@@ -311,10 +312,12 @@
            }
            myAddEvent(switchBtn,'click',idx_slide);
            myAddEvent(idx_clo,'click',function(){
-              var tt = setTimeout(function(){
-                idx_module.style.filter = 'alpha(opacity=0)';
-                idx_module.style.opacity = 0; 
-              },600);
+              if(w>640){
+                 var tt = setTimeout(function(){
+                      idx_module.style.filter = 'alpha(opacity=0)';
+                      idx_module.style.opacity = 0; 
+                 },600);
+              }
               idx_module.style.webkitTransform = 'translate3d(100%,0,0)';
               switchBtn.style.display = 'block';
            });
